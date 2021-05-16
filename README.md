@@ -4,16 +4,27 @@ based on oops concepts
 
 
 AIM OF PROJECT 
-	CREATE NEW ACCOUNTS 
+
+	CREATE NEW ACCOUNTS
+
 	SEE ACCOUNT DETAILS 
-	ENQUIRE BALANCE 
+
+	ENQUIRE BALANCE
+
 	LIST OF ALL ACCOUNT HOLDERS 
+
 	DEPOSIT AMOUNT 
+
 	WITHDRAW AMOUNT 
+
 	MODIFY ACCOUNT 
+
 	DELETE ACCOUNT 
+
 	WITHDRAW LOAN 
+
 	DEPOSIT LOAN 
+
 	LIST OF ALL LOAN HOLDERS 
  
 
@@ -28,6 +39,7 @@ A Computerized Bank Management System will be:
 This software has the following scope:
  
 Users 
+
 A user can Deposit, Withdraw & Enquire Balance    
  
 Admin:   
