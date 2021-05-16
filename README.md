@@ -6,18 +6,12 @@ class Acc              //class named 'acc'
 {
 private:
 
-	char name[20];              /*declaring a variable 'name' of type
-																				char for taking NAME from the user*/
-	int  age;                            /*declaring a variable 'age' of type
-																				integer for taking AGE from the user*/
-	char atype;                    /*declaring a char variable 'atype' of type
-																			char for taking A/C TYPE from the user*/
-	long  abal;                         /*declaring a variable 'abal' of type
-																			int for taking AMOUNT from the user*/
+	char name[20];              
+	int  age;                   
+	char atype;                
+	long  abal;                         
 	char phno[11];
-
 	char addr[20];
-
 	long  loan;
 
 public:
@@ -27,26 +21,26 @@ public:
 
 void create()
 {
-	loan=0;                    //initializing the value of loan taken by the new account creater to zero
+	loan=0;                    /
 	cout<<"\n\tENTER THE NAME OF ACCOUNT HOLDER : ";
-	cin>>name;                        // 'name' is here  taking name from the user
+	cin>>name;                       
 	cout<<endl;
 	cout<<"\tENTER THE AGE OF ACCOUNT HOLDER : ";
-	cin>>age;                            // 'age' is here  taking age from the user
+	cin>>age;                            
 	cout<<endl;
 	cout<<"\tENTER THE ADDRESS OF ACCOUNT HOLDER : ";
-	cin>>addr;                            // 'address' is here  taking address from the user
+	cin>>addr;                            
 	cout<<endl;
 	cout<<"\tENTER VALID Ph. No. OF ACC. HOLDER(should be of 10 digits) : ";
-	cin>>phno;                            // 'phno' is here  taking phone number from the user
+	cin>>phno;
 	while(strlen(phno)!=10)
 	{
 	cout<<"\tRE-ENTER A VALID Ph. No.(having 10 digits) : ";
-	cin>>phno;                            // 'phno' is here  taking phone number from the user
+	cin>>phno;                            
 	}
 	cout<<endl;
 	cout<<"\tENTER THE TYPE OF ACCOUNT (C/S) : ";
-	cin>>atype;                       // 'rec.atype' is here  taking A/C type from the user
+	cin>>atype;                       
 	switch(atype)
 	{
 	case 's' : break;
