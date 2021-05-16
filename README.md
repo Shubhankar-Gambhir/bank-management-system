@@ -15,10 +15,8 @@ private:
 	long  loan;
 
 public:
-
-	int  ano;                 //declaring a variable 'ano' of type integer
-
-
+	int  ano;                 
+	
 void create()
 {
 	loan=0;                    /
@@ -48,39 +46,38 @@ void create()
 	case 'S' : break;
 	case 'C' : break;
 	default : cout<<"\tRE-ENTER THE VALID ACCOUNT TYPE (C/S) : ";
-				 cin>>atype;               // 'rec.atype' is here  taking A/C type from the user
-	}
+	cin>>atype;               
 	cout<<endl;
 	cout<<"\tINITIAL AMOUNT NECESSARY FOR OPENING SAVING ACC. - 500"<<endl;
 	cout<<"\tINITIAL AMOUNT NECESSARY FOR OPENING CURRENT ACC. - 1000"<<endl;
 	cout<<"\n\tENTER THE AMOUNT : ";
-	cin>>abal;                    // 'rec.abal' is here  taking initial amount from the user
-	switch(atype)              //switch case to compare account type(saving /current)
+	cin>>abal;                    
+	switch(atype)              
 	{
-	case 'S' : while(abal<500)             /*if account type entered is saving then amount must be
-																							 greater than or equal to 500*/
+	case 'S' : while(abal<500)             
 				 {
 				  cout<<"\tRE-ENTER THE INITIAL NECESSARY AMOUNT : ";
-				  cin>>abal;            /*if amount entered is less than 500 then to re-enter amount*/
-				 }break;
-	case 's' : while(abal<500)             /*if account type entered is saving then amount must be
-																							 greater than or equal to 500*/
+				  cin>>abal;            
+				 }
+				 break;
+	case 's' : while(abal<500)             
 				 {
 				  cout<<"\tRE-ENTER THE INITIAL NECESSARY AMOUNT : ";
-				  cin>>abal;            /*if amount entered is less than 500 then to re-enter amount*/
-				 }break;
-	case 'C' : while(abal<1000)           /*if account type entered is saving then amount must be
-																							 greater than or equal to 1000*/
+				  cin>>abal;            
+				 }
+				 break;
+	case 'C' : while(abal<1000)           
 				 {
 				  cout<<"\tRE-ENTER THE INITIAL NECESSARY AMOUNT : ";
-				  cin>>abal;                 /*if amount entered is less than 1000 then to re-enter amount*/
-				 }break;
-	case 'c' : while(abal<1000)           /*if account type entered is saving then amount must be
-																							 greater than or equal to 1000*/
+				  cin>>abal;                 
+				 }
+				 break;
+	case 'c' : while(abal<1000)           
 				 {
 				  cout<<"\tRE-ENTER THE INITIAL NECESSARY AMOUNT : ";
-				  cin>>abal;                 /*if amount entered is less than 1000 then to re-enter amount*/
-				 }break;
+				  cin>>abal;                 
+				 }
+				 break;
 	}
 }
 
@@ -89,7 +86,7 @@ void depo()
 {
 	cout<<"\n\t CURRENT BALANCE : "<<abal;
 	cout<<"\n\n\t ENTER THE AMOUNT TO BE DEPOSIT : ";
-	cin>>am;                 //am is here taking the amount to be deposit
+	cin>>am;                 
 }
 
 
@@ -99,15 +96,14 @@ void depo()
 
 void update1()
 {
-	//displaying the updated information of matching account no.
-
+	
 	cout<<"\n\t A/C NO. : "<<ano;
 	cout<<"\n\t NAME : ";
 	puts(name);
 	cout<<"\t AGE : "<<age;
 	cout<<"\n\t A/C TYPE : "<<atype;
 	cout<<"\n\t YOUR NEW BALANCE : ";
-	abal+=am;                    //adding the depositing amount to current amount
+	abal+=am;                    
 	cout<<abal;
 }
 
@@ -120,7 +116,7 @@ void with()
 	long bal=0;
 	bal=abal-an;
 	switch(atype)
-	{                 //'am' is the A/C no. from which amount is to be withdrawn
+	{                
 	case 's' : if(bal<500)
 				  {
 				  cout<<"\n\n  TO CONTINUE YOUR ACC. YOU CAN'T WITHDRAW BEFORE THE MINIMUM AMOUNT LIMIT";
@@ -155,26 +151,19 @@ void with()
 	break;
 }
 }
-
 void update2()
 {
-//displaying the updated information of matching account no.
-
 	cout<<"\n\t A/C NO. : "<<ano;
 	cout<<"\n\t NAME : ";
 	puts(name);
 	cout<<"\t AGE : "<<age;
 	cout<<"\n\t A/C TYPE : "<<atype;
 	cout<<"\n\t YOUR NEW BALANCE : ";
-	abal-=an;                    //decreasing the withdrawing amount from current amount
+	abal-=an;                    
 	cout<<abal;
 }
-
-
 void AccDetails()
 {
-//displaying information of the matching account no.
-
 	cout<<"\n\t A/C.no : "<<ano;
 	cout<<"\n\t NAME : ";
 	puts(name);
@@ -185,20 +174,13 @@ void AccDetails()
 	puts(phno);
 	cout<<"\t A/C TYPE : "<<atype;
 	cout<<"\n\t BALANCE : "<<abal;
-
 }
-
-
 void bal()
 {
-//displaying BALANCE of the matching account no.
-
 	cout<<"\n\t A/C.no : "<<ano;
 	cout<<"\n\t NAME : "<<name;
 	cout<<"\n\t BALANCE : "<<abal;
 }
-
-
 void allacc()
 {
 	cout<<"    "<<ano<<"\t       "<<name<<"\t   "<<age<<"\t    "<<atype<<"\t           "<<abal<<endl;
@@ -207,8 +189,6 @@ void allacc()
 
 void mod()
 {
-//displaying all information of the matching account no.
-
 	cout<<"\n  PRESENT DETAILS : "<<endl;
 	cout<<"\n\t A/C NO. : "<<ano;
 	cout<<"\n\t NAME : ";
@@ -221,12 +201,8 @@ void mod()
 	cout<<"\t A/C TYPE : "<<atype;
 	cout<<"\n\t A/C BALANCE : "<<abal;
 }
-
-
 void  loanAcc()
 {
-//displaying information of the matching account no.
-
 	cout<<"\n\t A/C.no : "<<ano;
 	cout<<"\n\t NAME : ";
 	puts(name);
@@ -237,204 +213,169 @@ void  loanAcc()
 	puts(phno);
 	cout<<"\n\t LOAN : "<<loan;
 }
-
-
-
 void  allLOAN()
 {
-if(loan>0)
-{
-cout<<"    "<<ano<<"\t       "<<name<<"\t   "<<age<<"\t    "<<atype<<"\t           "<<loan<<endl;
+	if(loan>0)
+	{
+		cout<<"    "<<ano<<"\t       "<<name<<"\t   "<<age<<"\t    "<<atype<<"\t           "<<loan<<endl;
+	}
 }
-}
-
-
-
 void  ldepo()
 {
 	cout<<"\n\t CURRENT LOAN : "<<loan<<endl<<endl;
 }
 
-
 void lon1()
 {
-long l;
-cout<<"NAME : ";
-puts(name);
-cout<<"AGE : "<<age<<endl;
-cout<<"Address : ";
-puts(addr);
-cout<<"Phone No. : ";
-puts(phno);
-cout<<"Account Type : "<<atype<<endl;
-cout<<"\n Enter the Amount of LOAN : ";
-cin>>l;
-loan+=l;
-cout<<"\n TOTAL LOAN : "<<loan;
+	long l;
+	cout<<"NAME : ";
+	puts(name);
+	cout<<"AGE : "<<age<<endl;
+	cout<<"Address : ";
+	puts(addr);
+	cout<<"Phone No. : ";
+	puts(phno);
+	cout<<"Account Type : "<<atype<<endl;
+	cout<<"\n Enter the Amount of LOAN : ";
+	cin>>l;
+	loan+=l;
+	cout<<"\n TOTAL LOAN : "<<loan;
 }
-
-
 void  lon2()
 {
-long l;
-cout<<"NAME : ";
-puts(name);
-cout<<"AGE : "<<age<<endl;
-cout<<"Address : ";
-puts(addr);
-cout<<"Phone No. : ";
-puts(phno);
-cout<<"Account Type : "<<atype;
-cout<<endl;
-cout<<"\n Enter the LOAN Amount to be Deposit : ";
-cin>>l;
-loan=loan-l;
-cout<<"\n Remaining LOAN : "<<loan;
+	long l;
+	cout<<"NAME : ";
+	puts(name);
+	cout<<"AGE : "<<age<<endl;
+	cout<<"Address : ";
+	puts(addr);
+	cout<<"Phone No. : ";
+	puts(phno);
+	cout<<"Account Type : "<<atype;
+	cout<<endl;
+	cout<<"\n Enter the LOAN Amount to be Deposit : ";
+	cin>>l;
+	loan=loan-l;
+	cout<<"\n Remaining LOAN : "<<loan;
 }
-
-
 int Ano()
 {
-return ano;
+	return ano;
 }
-
 long amount()
 {
-return abal;
+	return abal;
 }
-
 char actype()
 {
-return atype;
+	return atype;
 }
-
 };
-
-
-void NEW_ACCOUNT()              //a function to create a new a/c
+void NEW_ACCOUNT()              
 {
-fstream fl;
-Acc rec;                  //declaring an object of fstream with 'fl'
-int no;
-fl.open("success.dat",ios::in|ios::binary);
-while(fl.read((char*)&rec,sizeof(rec)));
-                            //a inbuilt function for a new screen
-cout<<"\t\t     ++++++NEW ACCOUNT ENTRY FORM+++++++";
-	cout<<endl<<endl<<endl;
-cout<<"\tENTER YOUR ACCOUNT NO. : ";
-cin>>no;
-while(no==rec.ano)
-{
-cout<<"\n\tACCOUNT NO. ALREADY EXIST";
-cout<<"\n\tRE-ENTER A UNIQUE ACCOUNT NO. : ";
-cin>>no;
-}
-fl.close();
-fl.open("success.dat",ios::in|ios::app|ios::binary);                         /*opening file with an external file name
-																											"success.dat" in append
-
-																												mode for creating new accounts
-																												without deleting the previous accounts*/
-rec.ano=no;
- rec.create();
- cout<<endl<<endl;
- cout<<"YOUR ACCOUNT HAS BEEN CREATED SUCCESSFULLY...";
-fl.write((char*)&rec,sizeof(rec));                     //to write the above information in file named "success.dat"
-fl.close();              //closing the file named "success.dat"
-getch();
-                   //a inbuilt function for a new screen
-}
-void  DEPOSIT_AMOUNT()             //a function to daposit amount
-{
- Acc rec;
-fstream  fl; ;                  //declaring an object of fstream with 'fl'
-                         //a inbuilt function for a new screen
- int n,pos=-1;                      //declaring 'Q', 'am', 'pos'(with value -1) as a integer  variable
-	cout<<"\t\t\t  ***AMOUNT DEPOSITING FORM***";
-	cout<<endl<<endl<<endl;
-	cout<<"\t ENTER YOUR A/C NO. : ";
-	cin>>n;                  //'n' is the A/C no. in which amount is to be deposit
-fl.open("success.dat",ios::in|ios::out|ios::binary);                         /*opening file with an external file name
-																											"success.dat" in (read)in, (write)out
-																											  modes for reading and writing record */
-fl.read((char*)&rec,sizeof(rec));          //to read the records from file
- while(!fl.eof())                   //while(!fl.eof())
-{
- if(rec.Ano()==n)
-{
-	rec.depo();
-	pos=fl.tellg()-sizeof(rec);          //'pos' is now contain the position where the current record begins(matching)
- break;
-}
-fl.read((char*)&rec,sizeof(rec));               //to read record from file
-}
-if(pos>-1)
-{
-  rec.update1();
-fl.seekp(pos,ios::beg);                   /*'seekp' has been used to put the write pointer of file at the location
-															mentioned by pos which is in the beginning of the record in which amount is to be update*/
-fl.write((char*)&rec,sizeof(rec));              //to write the updated  record in file
-cout<<"\n\n\t THE AMOUNT HAS BEEN DEPOSITED SUCCESSFULLY";
-}
-else
-cout<<"\n\t A/C NOT EXIST";
-fl.close();              //closing the file named "success.dat"
-getch();
-                      //a inbuilt function for a new screen
+	fstream fl;
+	Acc rec;                  '
+	int no;
+	fl.open("success.dat",ios::in|ios::binary);
+	while(fl.read((char*)&rec,sizeof(rec)));
+				   
+	cout<<"\t\t     ++++++NEW ACCOUNT ENTRY FORM+++++++";
+		cout<<endl<<endl<<endl;
+	cout<<"\tENTER YOUR ACCOUNT NO. : ";
+	cin>>no;
+	while(no==rec.ano)
+	{
+	cout<<"\n\tACCOUNT NO. ALREADY EXIST";
+	cout<<"\n\tRE-ENTER A UNIQUE ACCOUNT NO. : ";
+	cin>>no;
+	}
+	fl.close();
+	fl.open("success.dat",ios::in|ios::app|ios::binary);                         
+	rec.ano=no;
+	 rec.create();
+	 cout<<endl<<endl;
+	 cout<<"YOUR ACCOUNT HAS BEEN CREATED SUCCESSFULLY...";
+	fl.write((char*)&rec,sizeof(rec));                     
+	fl.close();              
+	getch();
+	}
+	void  DEPOSIT_AMOUNT()             
+	{
+	 Acc rec;
+	fstream  fl; ;                  
+	 int n,pos=-1;                  
+	 cout<<"\t\t\t  ***AMOUNT DEPOSITING FORM***";
+		cout<<endl<<endl<<endl;
+		cout<<"\t ENTER YOUR A/C NO. : ";
+		cin>>n;                 
+	fl.open("success.dat",ios::in|ios::out|ios::binary);                         
+	fl.read((char*)&rec,sizeof(rec));          
+	 while(!fl.eof())                   //while(!fl.eof())
+	{
+	 if(rec.Ano()==n)
+	{
+		rec.depo();
+		pos=fl.tellg()-sizeof(rec);          
+	 break;
+	}
+	fl.read((char*)&rec,sizeof(rec));               
+	}
+	if(pos>-1)
+	{
+	  rec.update1();
+	fl.seekp(pos,ios::beg);                  
+	fl.write((char*)&rec,sizeof(rec));              
+	cout<<"\n\n\t THE AMOUNT HAS BEEN DEPOSITED SUCCESSFULLY";
+	}
+	else
+	cout<<"\n\t A/C NOT EXIST";
+	fl.close();             
+	getch();
 }
 void WITHDRAW_AMOUNT()     //a function to withdraw amount
 {
- Acc rec;                //declaring 'rec' as a structure variable
-fstream  fl; ;                  //declaring an object of fstream with 'fl'
-                         //a inbuilt function for a new screen
- int n,pos=-1;                   //declaring 'Q', 'am', 'pos'(with value -1) as a integer  variable
-	cout<<"\t\t\t  ***AMOUNT WITHDRAWING FORM***";
-	cout<<endl<<endl<<endl;
-	cout<<"\t ENTER YOUR A/C NO. : ";
-	cin>>n;                     //n is the A/C no. from  which amount is to be withdraw
-fl.open("success.dat",ios::in|ios::out|ios::binary);                        /*opening file with an external file name
-																											"success.dat" in (read)in, (write)out
-																											  modes for reading and writing record */
-fl.read((char*)&rec,sizeof(rec));           //to read record from fie
- while(fl)                   //while(!fl.eof())
-{
- if(rec.Ano()==n)
-{
-	 rec.with();
-pos=fl.tellg()-sizeof(rec);          //'pos' is now contain the position where the current record begins(matching)
- break;
+	 Acc rec;                
+	fstream  fl; ;           
+	 int n,pos=-1;            
+	 cout<<"\t\t\t  ***AMOUNT WITHDRAWING FORM***";
+		cout<<endl<<endl<<endl;
+		cout<<"\t ENTER YOUR A/C NO. : ";
+		cin>>n;                   
+	 while(fl)                  
+	{
+	 if(rec.Ano()==n)
+	{
+		 rec.with();
+		pos=fl.tellg()-sizeof(rec);          
+	 	break;
+	}
+	fl.read((char*)&rec,sizeof(rec));                     
+	}
+	if(pos>-1)
+	{
+		rec.update2();
+		fl.seekp(pos,ios::beg);              
+		fl.write((char*)&rec,sizeof(rec));         
+		cout<<"\n\n\t THE AMOUNT HAS BEEN WITHDRAWN SUCCESSFULLY";
+	}
+	else
+	cout<<"\n\t A/C NOT EXIST";
+	fl.close();              
+	getch();
+
 }
-fl.read((char*)&rec,sizeof(rec));                      //to read record from file
-}
-if(pos>-1)
-{
-	rec.update2();
-fl.seekp(pos,ios::beg);              /*'seekp' has been used to put the write pointer of file at the location
-															mentioned by pos which is in the beginning of the record in which amount is to be update*/
-fl.write((char*)&rec,sizeof(rec));         //to write the updated  record in file
-cout<<"\n\n\t THE AMOUNT HAS BEEN WITHDRAWN SUCCESSFULLY";
-}
-else
-cout<<"\n\t A/C NOT EXIST";
-fl.close();              //closing the file named "success.dat"
-getch();
-  
-}
-void  BALANCE_ENQUIRY()     //to enquire the balance of a particular a/c
+void  BALANCE_ENQUIRY()     
 {
 fstream fl;
-Acc rec;                  //declaring an object of fstream with 'fl'
-                         //a inbuilt function for a new screen
- int n=0,found=0;           //declaring 'n' and 'found' as integer variable initiating with value '0'
+Acc rec;                  
+ int n=0,found=0;           
 	cout<<"\t\t\t  ***BALANCE ENQUIRY***";
 	cout<<endl<<endl<<endl;
 	cout<<"\t ENTER THE A/C NO. OF PERSON WHOM BALANCE TO BE ENQUIRED  : ";
-	cin>>n;              //n is here taking the A/C no. of the person whom balance to be enquire
-fl.open("success.dat",ios::in|ios::binary);               /*opening file with an external file name
-																											"success.dat" in (read)in mode for reading  record */
-
-fl.read((char*)&rec,sizeof(rec));                      //to read record from file
- while(fl)                   //while(!fl.eof())
+	cin>>n;              
+fl.open("success.dat",ios::in|ios::binary);               
+fl.read((char*)&rec,sizeof(rec));                      
+while(fl)   
 {
  if(rec.Ano()==n)
 {
@@ -472,65 +413,59 @@ fl.read((char*)&rec,sizeof(rec));                      //to read record from fil
 	}
 	break;
 	}
- found=1;                 //if A/C no. matched with the existing A/C no.'s value of found is changed
+ found=1;                 
 }
-fl.read((char*)&rec,sizeof(rec));             //to read record from file
+fl.read((char*)&rec,sizeof(rec));            
 }
-if(found==0)              //if value of found is not changed above means A/C does not exist
+if(found==0)              
 cout<<"\nInvalid A/C No.";
-fl.close();              //closing the file named "success.dat"
+fl.close();              
 getch();
-                   //a inbuilt function for new screen
+                  
 }
 
-void ALL_ACCOUNT_HOLDERS()    //to see the list of all a/c holders
+void ALL_ACCOUNT_HOLDERS()    
 {
 Acc rec;
-fstream fl;                  //declaring an object of fstream with 'fl'
-fl.open("success.dat",ios::in|ios::binary);                    /*opening file with an external file name
-																											"success.dat" in (read)in mode for reading  records*/
-fl.read((char*)&rec,sizeof(rec));          //to read records from file
-                //a inbuilt function for new screen
+fstream fl;                 
+fl.open("success.dat",ios::in|ios::binary);                    
 	cout<<"\t\t      ALL ACCOUNT HOLDERS LIST";
 	cout<<"\n\t\t     --------------------------";
 	cout<<endl<<endl<<endl;
 	cout<<"****************************************************************"<<endl;
 	cout<<"    A/C NO.\t NAME\t   AGE\t  A/C TYPE\t  BALANCE"<<endl;
 	cout<<"****************************************************************"<<endl;
-while(fl)                   //to display all the accounts by end of file
+while(fl)                  
 {
 	rec.allacc();
-fl.read((char*)&rec,sizeof(rec));                   //to read records from file
+fl.read((char*)&rec,sizeof(rec));                   
 }
-fl.close();              //closing the file named "success.dat"
+fl.close();             
  getch();
-                       //a inbuilt function for new screen
+                      
 }
 
-void  MODIFY_ACCOUNT()           //a function to modify account
+void  MODIFY_ACCOUNT()           
 {
 fstream fl;
-Acc rec;                  //declaring an object of fstream with 'fl'
-                         //a inbuilt function for a new screen
- int n,pos=-1;             //declaring 'Q', 'am', 'pos'(with value -1) as a integer  variable
+Acc rec;                  
+ int n,pos=-1;             
 	cout<<"\t\t\t  ***ACCOUNT MODIFICATION FORM***";
 	cout<<endl<<endl<<endl;
 	cout<<"\t ENTER THE A/C NO. WHICH IS TO BE MODIFIED : ";
-	cin>>n;                     //'n' is here taking the A/C no. of the person whom balance to be enquire
-fl.open("success.dat",ios::in|ios::out|ios::binary);                         /*opening file with an external file name
-																											"success.dat" in (read)in, (write)out
-																											  modes for reading and writing record */
-fl.read((char*)&rec,sizeof(rec));                        //to read record from file
- while(!fl.eof())                   //while(!fl.eof())
+	cin>>n;                    
+fl.open("success.dat",ios::in|ios::out|ios::binary);                       
+fl.read((char*)&rec,sizeof(rec));                        
+ while(!fl.eof())                   
 {
  if(rec.Ano()==n)
 {
 	rec.mod();
 
-	pos=fl.tellg()-sizeof(rec);                       //'pos' is now contain the position where the current record begins(matching)
+	pos=fl.tellg()-sizeof(rec);                      
  break;
 }
-fl.read((char*)&rec,sizeof(rec));                 //to read record from file
+fl.read((char*)&rec,sizeof(rec));                
 }
 if(pos>-1)
 {
@@ -539,37 +474,30 @@ if(pos>-1)
   cout<<endl;
   rec.create();
 
-fl.seekp(pos,ios::beg);            /*'seekp' has been used to put the write pointer of file at the location
-															mentioned by 'pos' which is in the beginning of the record in which amount is to be update*/
-
-fl.write((char*)&rec,sizeof(rec));             //to write the updated  record in file
+fl.seekp(pos,ios::beg);           
+fl.write((char*)&rec,sizeof(rec));          
 cout<<"\n\n\t THE ACCOUNT HAS BEEN MODIFIED SUCCESSFULLY";
 }
 else
 cout<<"\n\t A/C NOT EXIST";
-fl.close();              //closing the file named "success.dat"
+fl.close();             
 getch();
-               //a inbuilt function for new screen
 }
 
-void DELETE_ACCOUNT()           //a function to delete account
+void DELETE_ACCOUNT()           
 {
-			 Acc rec;                   //declaring 'rec' as a structure variable
-			 int n;                     //declaring 'n' as a integer variable
-			 ifstream fl;                    //declaring an object of ifstream(to operate input operations of fstream) with 'fl'
-			                 //a inbuilt function for new screen
-			 fl.open("success.dat",ios::binary);            //opening file with a external name "success.dat"
-			 ofstream fl2;                    //declaring an object of ofstream(to operate output operations of fstream) with 'fl2'
-			 fl2.open("Temp.dat",ios::out|ios::binary);             //opening another file with another name "Temp.dat" in (write)out mode
+			 Acc rec;                   
+			 int n;                      
+			 ifstream fl; 
+			 fl.open("success.dat",ios::binary);            
+			 ofstream fl2;                    
+			 fl2.open("Temp.dat",ios::out|ios::binary);             
 			 cout<<"\t\t\t   ***ACCOUNT DELETION FORM***";
 			 cout<<endl<<endl<<endl;
 			 cout<<"\n  ENTER THE A/C NO. OF PERSON WHOM RECORD TO BE DELETE : ";
-			 cin>>n;            //here 'n' is taking the A/C no. of person whom record is to be deleted
-			 while(fl.read((char*)&rec,sizeof(rec)))           //to read record from file
+			 cin>>n;            
+			 while(fl.read((char*)&rec,sizeof(rec)))           
 			 {
-/*here it is reading all the A/C no.'s information other than the
-entered and writing them into another file named "Temp.dat"*/
-
 							 if(rec.Ano()!=n)
 							 fl2.write((char*)&rec,sizeof(rec));
 			 }
@@ -600,32 +528,30 @@ cin>>choice;
 return(choice);
 }
 
-void seeloan()     //a function to se the details of a specific account
+void seeloan()     
 {
 fstream fl;
-Acc rec;                  //declaring an object of fstream with 'fl'
-                         //a inbuilt function for a new screen
- int n=0,found=0;           //declaring 'n' and 'found' as integer variable initiating with value '0'
+Acc rec;                 
+ int n=0,found=0;          
 	cout<<"\t\t\t  ***ACCOUNT DETAILS***";
 	cout<<endl<<endl<<endl;
 	cout<<"\t ENTER THE A/C NO. OF PERSON WHOM DETAILS TO BE ENQUIRED  : ";
-	cin>>n;              //n is here taking the A/C no. of the person whom balance to be enquire
-fl.open("success.dat",ios::in|ios::binary);               /*opening file with an external file name
-																											"success.dat" in (read)in mode for reading  record */
+	cin>>n;             
+fl.open("success.dat",ios::in|ios::binary);               
 
-fl.read((char*)&rec,sizeof(rec));                      //to read record from file
- while(fl)                   //while(!fl.eof())
+fl.read((char*)&rec,sizeof(rec));                      
+ while(fl)                 
 {
  if(rec.Ano()==n)
 {
 	rec.loanAcc();
- found=1;                 //if A/C no. matched with the existing A/C no.'s value of found is changed
+ found=1;                 
 }
-fl.read((char*)&rec,sizeof(rec));             //to read record from file
+fl.read((char*)&rec,sizeof(rec));              
 }
-if(found==0)              //if value of found is not changed above means A/C does not exist
+if(found==0)               
 cout<<"\nInvalid A/C No.";
-fl.close();              //closing the file named "success.dat"
+fl.close();               
 getch();
 }
 
@@ -658,23 +584,22 @@ fl.open("success.dat",ios::in|ios::out|ios::binary);
 			cout<<setw(40)<<"LOAN WITHDRAWING MENU";
 			cout<<"\n\n Enter your Account No. : ";
 			cin>>ac;
-			fl.read((char*)&rec,sizeof(rec));                        //to read record from file
- while(!fl.eof())                   //while(!fl.eof())
+			fl.read((char*)&rec,sizeof(rec));                        
+ while(!fl.eof())                   
 {
  if(rec.Ano()==ac)
 {
 	rec.ldepo();
-	pos=fl.tellg()-sizeof(rec);          //'pos' is now contain the position where the current record begins(matching)
+	pos=fl.tellg()-sizeof(rec);
  break;
 }
-fl.read((char*)&rec,sizeof(rec));               //to read record from file
+fl.read((char*)&rec,sizeof(rec));             
 }
 if(pos>-1)
 {
   rec.lon1();
-fl.seekp(pos,ios::beg);                   /*'seekp' has been used to put the write pointer of file at the location
-															mentioned by pos which is in the beginning of the record in which amount is to be update*/
-fl.write((char*)&rec,sizeof(rec));              //to write the updated  record in file
+fl.seekp(pos,ios::beg);                   
+fl.write((char*)&rec,sizeof(rec));             
 cout<<"\n\n\t THE LOAN AMOUNT HAS BEEN WITHDRAWN SUCCESSFULLY";
 }
 else
@@ -688,16 +613,16 @@ fl.open("success.dat",ios::in|ios::out|ios::binary);
 			cout<<setw(40)<<"LOAN DEPOSITING MENU";
 			cout<<"\n\n Enter your Account No. : ";
 			cin>>ac;
-			fl.read((char*)&rec,sizeof(rec));                        //to read record from file
- while(!fl.eof())                   //while(!fl.eof())
-{
+			fl.read((char*)&rec,sizeof(rec));                       
+ while(!fl.eof())                  
+ {
  if(rec.Ano()==ac)
 {
 	rec.ldepo();
-	pos=fl.tellg()-sizeof(rec);          //'pos' is now contain the position where the current record begins(matching)
+	pos=fl.tellg()-sizeof(rec);         
  break;
 }
-fl.read((char*)&rec,sizeof(rec));               //to read record from file
+fl.read((char*)&rec,sizeof(rec));               
 }
 if(pos>-1)
 {
